@@ -1,0 +1,11 @@
+from django.urls import path
+from . import views
+app_name = 'blog'
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('post/<int:post_id>/', views.detail, name='detail'),
+    path('new_url/',views.new_url_views, name='new_page_url'),
+    path('old-url/',views.old_url_redirect, name='old_page_url'),
+    path('contact/',views.contact,name='contact'),
+    path("about",views.about,name="about")
+]
